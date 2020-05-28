@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+            xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d"            
+            xmlns:local ="clr-namespace:fondomerende.Main.Utilities"
+            xmlns:Graph="clr-namespace:fondomerende.Main.Utilities"
+            x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.AddSnack.Popup.AddSnackPopUpPage"
+            x:Name="AddSnackPopUp"
+            HasKeyboardOffset="False">
+
+    <!--You can set an animation in the xaml file or in the csharp code behind-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+          PositionIn="Center"
+          PositionOut="Center"
+          ScaleIn="1.2"
+          ScaleOut="0.8"
+          DurationIn="200"
+          DurationOut="200"
+          EasingIn="SinOut"
+          EasingOut="SinIn"
+          HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <Graph:RoundedCornerView 
+        RoundedCornerRadius="20"                                  
+        Margin="{OnPlatform iOS=' 10,160,10,160', Android='20,40,20,40'}">
+
+
+    </Graph:RoundedCornerView>
+</pages:PopupPage>

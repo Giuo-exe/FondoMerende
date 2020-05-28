@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:fondomerende.Main.Utilities"
+             mc:Ignorable="d"
+          xmlns:controls="clr-namespace:Plugin.CrossPlatformTintedImage.Abstractions;assembly=Plugin.CrossPlatformTintedImage.Abstractions"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.Settaggio.View.ChangeColorViewCell">
+    <ViewCell.View>
+        <StackLayout Opacity="{OnPlatform iOS=0.5,Android=1}"
+             IsVisible="{OnPlatform Android=true, Default=false}"
+            Orientation="Horizontal">
+            <controls:TintedImage
+                x:Name="SettingIcon" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                Scale="0.6"
+                Margin="5,0,5,0"
+                Source="{local:EmbeddedImage Resource=fondomerende.image.paint-palette.png}">
+            </controls:TintedImage>
+            <Label
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="CenterAndExpand"                               
+                x:Name="SetSetting"
+                FontSize="14"
+                TextColor="Black"
+                Text="Cambia tema icone!">
+            </Label>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

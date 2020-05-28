@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:Plugin.CrossPlatformTintedImage.Abstractions;assembly=Plugin.CrossPlatformTintedImage.Abstractions"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:fondomerende.Main.Utilities"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.BuySnack.View.BuySnackViewCell">
+    <ViewCell.View>
+        <!--Acquista Snack-->
+        <StackLayout 
+            Orientation="Horizontal" 
+            VerticalOptions="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <controls:TintedImage 
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    x:Name="BuyIcon" 
+                    Scale="0.6"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    Margin="0,0,0,0 "
+                    Aspect="AspectFit"
+                    Source="{local:EmbeddedImage Resource=fondomerende.image.shopping_bag_256x256.png}">
+                </controls:TintedImage>
+
+                <!--<Image
+                    Source="{local:EmbeddedImage Resource=fondomerende.image.Chronology_icon_256x256.png}"
+                    Grid.Row="0"
+                    Grid.Column="0"      
+                    Scale="{OnPlatform Android=0.6, iOS=0.6}"
+                    x:Name ="ChronologyButton"
+                    Aspect="AspectFit">
+                </Image>-->
+
+                <StackLayout
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="0,0,0,0">
+
+                    <Label
+                        VerticalOptions="End"                               
+                        Text="Acquista Snack"
+                        FontSize="14"
+                        TextColor="Black">
+
+                    </Label>
+
+                    <Label
+                        Text="Visualizza e Acquista Snacks"
+                        FontSize="12"
+                        TextColor="#9c9c9c">
+
+                    </Label>
+
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

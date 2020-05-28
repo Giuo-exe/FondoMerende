@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0" package="net.madeinapp.fondomerende" android:installLocation="auto" android:versionCode="2">
+	<uses-sdk android:targetSdkVersion="28" android:minSdkVersion="21" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<application android:label="Fondo Merende" android:icon="@mipmap/icon"></application>
+</manifest>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.History.Content.ChronologyContentPage"
+             xmlns:local="clr-namespace:fondomerende.Main.Utilities"
+             Title="Cronologia">
+
+    <controls:AnimationPage.PageAnimation>
+        <controls:LandingPageAnimation Duration="Medium" Subtype="Default" />
+    </controls:AnimationPage.PageAnimation>
+    
+            
+    <controls:AnimationPage.Content>
+        <Grid>
+            <Image
+                Grid.Column="0"
+                Grid.Row="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Aspect="Fill"
+                Source="{local:EmbeddedImage Resource=fondomerende.image.cronologiaBG.png}"
+                Opacity="0.3">
+            </Image>
+
+            <ScrollView 
+                Grid.Row="0"
+                Grid.Column="0"
+                IsVisible="true"
+                Padding="0,0,0,10">
+
+                <StackLayout
+                Padding="0,0,10,0"
+                x:Name="ContentLayout"
+                Spacing="0"
+                Margin="10"
+                Orientation="Vertical">
+
+                </StackLayout>
+
+            </ScrollView>
+        </Grid>
+        
+    </controls:AnimationPage.Content>
+</controls:AnimationPage>

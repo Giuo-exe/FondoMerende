@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    
+<popups:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:popups="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+            xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+            xmlns:tt1="clr-namespace:ColorPicker.TouchTracking"
+            x:Class="ColorPicker.ColorPickerPopup"
+            xmlns:local="clr-namespace:fondomerende.Main.Utilities" >
+
+    
+    <local:RoundedCornerView
+                RoundedCornerRadius = "20"
+                HorizontalOptions = "CenterAndExpand"
+                VerticalOptions = "Center"
+                HeightRequest = "430"
+                WidthRequest = "250">
+        
+        <StackLayout>
+            <StackLayout 
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                BackgroundColor="#f29e17"
+                WidthRequest="250"
+                HeightRequest="50"
+                Margin="0,0,0,-10">
+
+                    <Label 
+                        Text="Fondo Merende"
+                        Margin="0,5,0,0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="#f29e17"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White">
+                     </Label>
+            </StackLayout>
+
+
+            <Frame BackgroundColor="White" HasShadow="False">
+
+                <StackLayout>
+                
+                
+                    <Grid BackgroundColor="White" HeightRequest="430" WidthRequest="250">
+
+                        <skia:SKCanvasView x:Name="canvasView" PaintSurface="CanvasView_OnPaintSurface"/>
+
+                        <Grid.Effects>
+                            <tt1:TouchEffect Capture="True" TouchAction="OnTouchEffectAction" />
+                        </Grid.Effects>
+
+                    </Grid>
+                    <Button Text="Cancel" Clicked="OnClose" BackgroundColor="White" HorizontalOptions="End"></Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </local:RoundedCornerView>
+</popups:PopupPage>

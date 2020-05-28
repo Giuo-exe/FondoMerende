@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local ="clr-namespace:fondomerende.Main.Utilities"
+             xmlns:Graph="clr-namespace:fondomerende.Main.Utilities"
+             x:Name="DepositPop"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.Deposit.Popup.DepositPopUp"
+             HasKeyboardOffset="False">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+          PositionIn="Center"
+          PositionOut="Center"
+          ScaleIn="1.2"
+          ScaleOut="0.8"
+          DurationIn="200"
+          DurationOut="200"
+          EasingIn="SinOut"
+          EasingOut="SinIn"
+          HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <Graph:RoundedCornerView>
+
+
+        <AbsoluteLayout BackgroundColor="White">
+            
+
+            <StackLayout
+                HorizontalOptions="CenterAndExpand" 
+                Margin="30,20,0,0">
+                <Label 
+                    Margin="10,0,0,10" 
+                    HorizontalOptions="Center" VerticalOptions="StartAndExpand" Text="Fondo Merende" FontAttributes="Bold">
+                </Label>
+                <local:LineEntry 
+                    x:Name="Amount" 
+                    Placeholder="Quanto vuoi depositare?" 
+                    Keyboard="Numeric"
+                    TextChanged="Amount_TextChanged"
+                    MaxLength="5"
+                    Margin="21,0,0,0"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center">
+                </local:LineEntry>
+
+                <Label 
+                    x:Name="ErrorLabel" 
+                    TextColor="Red" 
+                    Text=""
+                    Margin="18,0,0,0"
+                    HorizontalOptions="Center">
+                </Label>
+            </StackLayout>
+        </AbsoluteLayout>
+        <StackLayout 
+                Orientation="Horizontal" 
+                VerticalOptions="End" 
+                HorizontalOptions="Start"
+                Margin="20,0,0,10">
+            <Button Text="Annulla"  VerticalOptions="EndAndExpand" FontSize="14" x:Name="Discard" Clicked="Discard_Clicked" Style="{StaticResource FondomerendeButton}" HorizontalOptions="StartAndExpand" >
+            </Button>
+
+        </StackLayout>
+        <StackLayout
+                Orientation="Horizontal" 
+                VerticalOptions="End" 
+                HorizontalOptions="End"
+                Margin="0,0,20,10">
+            <Button Text="Deposita"  VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand"  FontSize="14" x:Name="Apply" Clicked="Apply_Clicked" Style="{StaticResource FondomerendeButton}">
+            </Button>
+        </StackLayout>
+    </Graph:RoundedCornerView>
+</pages:PopupPage>

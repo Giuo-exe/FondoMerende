@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:fondomerende.Main.Utilities"
+             xmlns:controls="clr-namespace:Plugin.CrossPlatformTintedImage.Abstractions;assembly=Plugin.CrossPlatformTintedImage.Abstractions"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.LogOut.View.LogoutViewCell"
+             Tapped="LogoutCellTapped">
+
+    <ViewCell.View>                                                    <!--Tasto Logout--> 
+        <StackLayout 
+            Orientation="Horizontal" 
+            VerticalOptions="Center"
+            BackgroundColor="{OnPlatform Android=WhiteSmoke}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <controls:TintedImage 
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    x:Name="LogoutIcon" 
+                    Scale="{OnPlatform Android=0.5, Default=0.6}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    Aspect="AspectFit"
+                    Source="{local:EmbeddedImage Resource=fondomerende.image.logout-img.png}"
+                    TintColor="Aquamarine">
+                </controls:TintedImage>
+
+                <StackLayout
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="1">
+
+                    <Label
+                        VerticalOptions="End"                               
+                        Text="Log out"
+                        FontSize="14"
+                        TextColor="{OnPlatform iOS=Red, Default=Black}">
+
+                    </Label>
+
+                    <Label
+                        Text="Effettua il Log out"
+                        FontSize="12"
+                        TextColor="#9c9c9c">
+
+                    </Label>
+
+                </StackLayout>
+            </Grid>
+            
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

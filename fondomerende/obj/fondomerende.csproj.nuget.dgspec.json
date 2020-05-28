@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Giulio\\source\\repos\\fondomerende\\fondomerende\\fondomerende.csproj": {}
+    "C:\\Users\\Giulio\\Desktop\\fondomerende\\fondomerende2\\fondomerende\\fondomerende.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Giulio\\source\\repos\\fondomerende\\fondomerende\\fondomerende.csproj": {
+    "C:\\Users\\Giulio\\Desktop\\fondomerende\\fondomerende2\\fondomerende\\fondomerende.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Giulio\\source\\repos\\fondomerende\\fondomerende\\fondomerende.csproj",
+        "projectUniqueName": "C:\\Users\\Giulio\\Desktop\\fondomerende\\fondomerende2\\fondomerende\\fondomerende.csproj",
         "projectName": "fondomerende",
-        "projectPath": "C:\\Users\\Giulio\\source\\repos\\fondomerende\\fondomerende\\fondomerende.csproj",
+        "projectPath": "C:\\Users\\Giulio\\Desktop\\fondomerende\\fondomerende2\\fondomerende\\fondomerende.csproj",
         "packagesPath": "C:\\Users\\Giulio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Giulio\\source\\repos\\fondomerende\\fondomerende\\obj\\",
+        "outputPath": "C:\\Users\\Giulio\\Desktop\\fondomerende\\fondomerende2\\fondomerende\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -22,14 +22,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "netstandard2.0": {
             "projectReferences": {}
           }
         },
@@ -40,7 +40,89 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Com.Airbnb.Xamarin.Forms.Lottie": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Flurl": {
+              "target": "Package",
+              "version": "[2.8.2, )"
+            },
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "MR.Gestures": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "PCLStorage": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Plugin.CrossPlatformTintedImage": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Plugin.ImageCropper": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[1.1.5.188, )"
+            },
+            "SkiaSharp": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "SkiaSharp.Views": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "SkiaSharp.Views.Forms": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "XFControls": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0.6, )"
+            },
+            "XForms.Plugin.AnimationNavigationPage": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            },
+            "Xam.Plugin.MultiGestureView": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.2.0.815419, )"
+            },
+            "Xamarin.HotReload": {
+              "target": "Package",
+              "version": "[1.4.19, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -51,11 +133,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }

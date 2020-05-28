@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+             xmlns:ffm="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.SubFolder.About_and_UserSettings.View"
+             xmlns:local7="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.SubFolder.Deposit.View"
+             xmlns:local="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.SubFolder.EditUser.View"
+             xmlns:local2="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.SubFolder.EditSnack.View"
+             xmlns:local3="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.SubFolder.AddSnack.View"
+             xmlns:local4="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.SubFolder.BuySnack.View"
+             xmlns:local5="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.SubFolder.History.View"
+             xmlns:local6="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.SubFolder.LogOut.View"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:local1="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.SubFolder.Settaggio.View"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.About_and_UserSettings.Page.AboutPage"
+             Title="Impostazioni">
+  <!--Pages can be added as references or inline-->
+    
+    <controls:AnimationPage.PageAnimation>
+        <controls:LandingPageAnimation Duration="Medium" Subtype="Default" />
+    </controls:AnimationPage.PageAnimation>
+   
+    <controls:AnimationPage.Content>
+        <TableView
+            BackgroundColor="White"
+            Intent="Settings" 
+            HasUnevenRows="False"
+            x:Name="tableView">
+            <TableRoot>
+                <TableSection
+                      TextColor="{OnPlatform Android= #6495ed}">
+                    <ffm:FondoFondoMerendeViewCell
+                        Height="50"
+                        x:Name="FondoFondoMerendeViewCell"
+                        IsEnabled="False">
+                    </ffm:FondoFondoMerendeViewCell>
+                </TableSection>
+                <TableSection
+                    Title="Informazioni Personali" 
+                    TextColor="{OnPlatform Android= #6495ed}">
+                    <local:EditUserInfoViewCell  
+                        Tapped="EditUserInfoViewCell_Tapped"
+                        x:Name="EditUserInfoViewCell"
+                        IsEnabled="True">
+                    </local:EditUserInfoViewCell>
+                </TableSection>
+
+                <TableSection 
+                    Title="App"
+                    TextColor="{OnPlatform Android= #6495ed}">
+                    <local1:ChangeColorViewCell IsEnabled="{OnPlatform iOS = false, Android = true}"
+                        Tapped="ChangeColorViewCell_Tapped"
+                        x:Name="ChangeColorViewCell">
+                    </local1:ChangeColorViewCell>
+                    <SwitchCell Text="Pac-Man" OnColor="{OnPlatform iOS = Red}" On="false" IsEnabled="{OnPlatform iOS=false}" x:Name="Pm" OnChanged="OnPmChanged"/>
+                    <SwitchCell Text="Pioggia di Muffins" OnColor="{OnPlatform iOS = #CE8636}" On="false" IsEnabled="true" x:Name="PaoloAbilita" OnChanged="OnPaoloChanged"/>
+                    <SwitchCell Text="Passa al Server di test" OnColor="{OnPlatform iOS = Red}" On="false" OnChanged="Pts_Changed" x:Name="Pts"/>
+                </TableSection>
+                <TableSection Title="Informazioni" TextColor="{OnPlatform Android= #6495ed}">
+                 <TextCell DetailColor="Transparent" Text="'Sviluppata' da Giulio, Stefano e Daniel" x:Name="Developed" IsEnabled="False"/>
+                    <TextCell DetailColor="Transparent" Text="Version" x:Name="Version" IsEnabled="False"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        
+    </controls:AnimationPage.Content>
+</controls:AnimationPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.SubFolder.BuySnack.View"
+             xmlns:local2="clr-namespace:fondomerende.Main.Utilities"
+             mc:Ignorable="d"
+             xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.BuySnack.Page.BuySnackListPage"
+             Title="Acquista Snack"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"             
+             ios:Page.UseSafeArea="true">
+    
+    <controls:AnimationPage.PageAnimation>
+        <controls:SlidePageAnimation Duration="Medium" Subtype="FromBottom" />
+    </controls:AnimationPage.PageAnimation>
+    
+    <controls:AnimationPage.Content>
+        <StackLayout
+                x:Name="StackSnack"
+                BackgroundColor="#FFF8EB">
+            <ListView
+                Margin="0,0,0,0"
+                x:Name="ListView"
+                VerticalOptions="Start"
+                IsPullToRefreshEnabled="true"
+                RefreshCommand="{Binding RefreshCommand}"
+                ItemSelected="ListView_ItemSelected"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                IsVisible="True"
+                BackgroundColor="#FFF8EB"
+                HasUnevenRows="True">
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <local:BuySnackListViewCell 
+                         x:Name="BuySnackListViewCell">
+                        </local:BuySnackListViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </controls:AnimationPage.Content>
+</controls:AnimationPage>

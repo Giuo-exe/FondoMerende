@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.EditSnack.Page.EditSnackListPage"
+             xmlns:local="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.SubFolder.EditSnack.View"
+             xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+             Title="Modifica Snack"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+    
+    <controls:AnimationPage.PageAnimation>
+        <controls:SlidePageAnimation Duration="Short" Subtype="FromBottom" />
+    </controls:AnimationPage.PageAnimation>
+    
+    <controls:AnimationPage.Content>
+        <ListView
+                BackgroundColor="White"
+                x:Name="ListView"
+                IsPullToRefreshEnabled="true"
+                RefreshCommand="{Binding RefreshCommand}"
+                ItemSelected="ListView_ItemSelected"               
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:SnacksListSettingsViewCell x:Name="EditSnack"></local:SnacksListSettingsViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </controls:AnimationPage.Content>
+</controls:AnimationPage>

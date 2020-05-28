@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:fondomerende.Main.Utilities" 
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.History.Content.GradientColorPage">
+    <Grid VerticalOptions="FillAndExpand" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" BackgroundColor="Olive">
+            <StackLayout VerticalOptions="Center">
+                <Label Text="Normal color for stacklayout" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  TextColor="White"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="1">
+            <local:GradientColorStack StartColor="Green" EndColor="Red">
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Label Text="Gradient color for StackLayout" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   TextColor="White"/>
+                </StackLayout>
+
+            </local:GradientColorStack>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:controls="clr-namespace:Plugin.CrossPlatformTintedImage.Abstractions;assembly=Plugin.CrossPlatformTintedImage.Abstractions"
+             xmlns:local="clr-namespace:fondomerende.Main.Utilities"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.AddSnack.View.AddSnackViewCell">
+    <ViewCell.View>
+        <!--Tasto aggiungi snack-->
+        <StackLayout 
+            Orientation="Horizontal" 
+            VerticalOptions="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <controls:TintedImage 
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    x:Name="AddIcon" 
+                    TintColor="{Binding LoadTint}"
+                    Scale="{OnPlatform Android=0.5, Default=0.6}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    Aspect="AspectFit"
+                    Source="{local:EmbeddedImage Resource=fondomerende.image.add-snack-icon.png}">
+                </controls:TintedImage>
+                
+                <StackLayout
+                    Margin="0,0,0,0"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="1">
+
+                    <Label
+                        VerticalOptions="End"                               
+                        Text="Aggiungi Snack"
+                        FontSize="14"
+                        TextColor="Black">
+
+                    </Label>
+
+                    <Label
+                        Text="Possibilità Infinite"
+                        FontSize="12"
+                        TextColor="#9c9c9c">
+                    </Label>
+
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

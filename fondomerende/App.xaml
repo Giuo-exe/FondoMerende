@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="fondomerende.App">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <Color x:Key="ColorHeader">#FBB03B</Color>
+
+            <Color x:Key="ColorBackground">#cb3234</Color>
+
+            <Color x:Key="ColorText">WhiteSmoke</Color>
+
+            <Color x:Key="ColorSnackBackground">#F7F7F7</Color>
+            
+
+            <!--<OnPlatform
+                x:TypeArguments="x:String" x:Key="OpenSans"
+                iOS="OpenSans"
+                Android="open_sans.ttf#Open Sans">
+            </OnPlatform>-->
+
+            <Style x:Key="FondomerendeButton" TargetType="Button">
+                <Setter Property="TextColor" Value = "Black"/>
+                <Setter Property="BorderRadius" Value = "20" />
+                <Setter Property="BorderColor" Value = "White" />
+                <Setter Property="BorderWidth" Value = "0.75" />
+                <Setter Property="BackgroundColor" Value = "WhiteSmoke"/>
+                <Setter Property="HeightRequest" Value = "40" />
+                <Setter Property="FontSize" Value = "15" />
+            </Style>
+
+            <Style x:Key="RemeberButton" TargetType="Button">
+                <Setter Property="BorderRadius" Value = "{OnPlatform Android=30, iOS=12}" />
+                <Setter Property="BorderColor" Value = "White" />
+                <Setter Property="BorderWidth" Value = "0.75" />
+                <Setter Property="BackgroundColor" Value = "Transparent"/>
+                <Setter Property="HeightRequest" Value = "24" />
+                <Setter Property="WidthRequest" Value = "24" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

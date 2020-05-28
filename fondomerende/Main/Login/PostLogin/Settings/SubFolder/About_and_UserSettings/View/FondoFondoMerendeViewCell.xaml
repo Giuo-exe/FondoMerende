@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:Plugin.CrossPlatformTintedImage.Abstractions;assembly=Plugin.CrossPlatformTintedImage.Abstractions"
+             xmlns:local="clr-namespace:fondomerende.Main.Utilities"
+             mc:Ignorable="d"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.About_and_UserSettings.View.FondoFondoMerendeViewCell">
+    <ViewCell.View>
+        <!--Tasto aggiungi snack-->
+        <StackLayout 
+            Orientation="Horizontal" >
+            <controls:TintedImage  
+                x:Name="SnackIcon" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                Scale="0.8"
+                Margin="5,0,5,0"
+                Source="{local:EmbeddedImage Resource=fondomerende.image.fund_256x256.png}">
+            </controls:TintedImage>
+            <Label
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="CenterAndExpand"                    
+                x:Name="FundFund"
+                FontSize="14"
+                TextColor="Black"
+                Text="You Shouldn't be here.">
+            </Label>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

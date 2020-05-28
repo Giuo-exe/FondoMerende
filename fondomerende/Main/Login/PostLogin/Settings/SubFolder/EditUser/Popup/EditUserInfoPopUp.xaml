@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:fondomerende.Main.Utilities"
+            xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+            mc:Ignorable="d"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.EditUser.Popup.EditUserInfoPopUp"
+             x:Name="EditUserInfoPopUpXaml"
+             HasKeyboardOffset="False">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+          PositionIn="Top"
+          PositionOut="Bottom"
+          ScaleIn="1.2"
+          ScaleOut="0.8"
+          DurationIn="400"
+          DurationOut="400"
+          EasingIn="SpringOut"
+          EasingOut="SpringIn"
+          HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <local:RoundedCornerView 
+        RoundedCornerRadius="10"
+        Margin="{OnPlatform iOS='30,100,30,250', Android='20,100,20,100'}">
+        <StackLayout BackgroundColor="White" VerticalOptions="StartAndExpand" >
+            <Label 
+                Text="Fondo Merende" 
+                FontAttributes="Bold" 
+                HorizontalOptions="Center" 
+                VerticalOptions="StartAndExpand" 
+                Margin="0,30,0,0"/>
+
+            <local:LineEntry
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="CenterAndExpand" 
+                Margin="0,20,0,30" 
+                WidthRequest="200"
+                x:Name="usernameEntry"
+                IsSpellCheckEnabled="False"
+                IsTextPredictionEnabled="False"
+                Keyboard="Plain" />
+
+            <local:LineEntry 
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="CenterAndExpand" 
+                x:Name="friendlynameEntry" 
+                WidthRequest="200"
+                
+                IsSpellCheckEnabled="False"
+                IsTextPredictionEnabled="False"
+                Keyboard="Plain" />
+
+            <local:LineEntry 
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="CenterAndExpand" 
+                    Placeholder="Cambia Password"
+                    WidthRequest="200"
+                    IsPassword="True"
+                    x:Name="passwordEntry" 
+                    Margin="0,20,0,30"/>
+            <Button
+                BackgroundColor="Red"
+                VerticalOptions="EndAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Margin="5,40,5,0"
+                Clicked="ApplyChanges_Clicked_1" 
+                x:Name="ApplyChanges" 
+                Text="Applica"
+                TextColor="Black"
+                Style="{StaticResource FondomerendeButton}">
+            </Button>
+        </StackLayout>
+    </local:RoundedCornerView>
+</pages:PopupPage>

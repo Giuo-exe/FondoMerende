@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:fondomerende.Main.Login.PostLogin.AllSnack.Page"
+    xmlns:local2="clr-namespace:fondomerende.Main.Login.PostLogin.Settings.Page"
+    xmlns:local3="clr-namespace:fondomerende.Main.Login.TabletMode.Page"
+    x:Class="fondomerende.Main.Login.TabletMode.Tabbed.TabbedPageTablet"
+    SelectedTabColor="{OnPlatform Android = White}"
+    UnselectedTabColor="{OnPlatform Android = #4d4d4d}"
+    Title="{OnPlatform Android = FondoMerende}"
+    BackgroundColor="{StaticResource ColorSnackBackground}"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true">
+
+    <NavigationPage 
+        Title="{OnPlatform Android=Azioni}"
+        x:Name="NavPage"
+        ios:NavigationPage.PrefersLargeTitles="False"
+        ios:NavigationPage.IsNavigationBarTranslucent="True"
+        BarTextColor="{OnPlatform iOS='White'}"
+        BarBackgroundColor="{OnPlatform iOS=OrangeRed}">
+        <x:Arguments>
+            <local3:TabletPage />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

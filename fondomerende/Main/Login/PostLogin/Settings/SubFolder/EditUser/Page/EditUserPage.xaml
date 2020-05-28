@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:fondomerende.Main.Utilities"
+             mc:Ignorable="d"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.EditUser.Page.EditUserPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             ios:Page.UseSafeArea="True"
+             Title="{OnPlatform iOS='Modifica Utente'}">
+
+    <ContentPage.Content>
+        <!--Pagina Modifica utente-->
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    HeightRequest="50"
+                    WidthRequest="300"
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="20">
+
+                    <local:LineEntry 
+                    HorizontalOptions="StartAndExpand" 
+                    Margin="10,20,0,30" 
+                    WidthRequest="200"
+                    x:Name="usernameEntry"
+                    IsSpellCheckEnabled="False"
+                    IsTextPredictionEnabled="False"
+                    Keyboard="Plain" />
+
+                    <local:LineEntry 
+                    HorizontalOptions="StartAndExpand" 
+                    x:Name="friendlynameEntry" 
+                    WidthRequest="200"
+                    Margin="10,20,100,30"
+                    IsSpellCheckEnabled="False"
+                    IsTextPredictionEnabled="False"
+                    Keyboard="Plain" />
+
+                    <local:LineEntry 
+                    HorizontalOptions="StartAndExpand" 
+                    Placeholder="Cambia Password"
+                    WidthRequest="200"
+                    IsPassword="True"
+                    x:Name="passwordEntry" 
+                    Margin="10,20,0,30"/>
+
+                    
+
+                    <Button
+                    HorizontalOptions="FillAndExpand"
+                    AbsoluteLayout.LayoutBounds=".5,.5,25,1000"
+                    Margin="5,0,5,0"
+                    Clicked="ApplyChanges_Clicked_1" 
+                    x:Name="ApplyChanges" 
+                    Text="Applica"
+                    TextColor="Black"
+                    Style="{StaticResource FondomerendeButton}">
+                    </Button>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

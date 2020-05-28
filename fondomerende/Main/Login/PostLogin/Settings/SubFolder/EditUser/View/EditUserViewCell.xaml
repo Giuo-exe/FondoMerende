@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:fondomerende.Main.Utilities"
+             x:Class="fondomerende.Main.Login.PostLogin.Settings.SubFolder.EditUser.View.EditUserViewCell">
+
+    <ViewCell.View>
+        <!--Cerchio con il nome al suo interno-->
+        <StackLayout
+            BackgroundColor="{OnPlatform Android=WhiteSmoke}"
+            Orientation="Horizontal"
+            HorizontalOptions="FillAndExpand">
+            <Frame
+                IsVisible="{OnPlatform iOS=false, Android= true}"
+                x:Name="Cerchio"
+                HasShadow="true"
+                BorderColor="Black"
+                HeightRequest="64" 
+                WidthRequest="64" 
+                CornerRadius="32.5"
+                HorizontalOptions="Start" 
+                VerticalOptions="Center" 
+                Margin="5" 
+                Padding="0" 
+                BackgroundColor="Gray"
+                IsEnabled="False">
+                <StackLayout 
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                    <Label
+                        x:Name="inizialeLabel"
+                        Font="Bold,28"
+                        TextColor="WhiteSmoke" 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        HorizontalTextAlignment="Center" 
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+
+            </Frame>
+            <local:RoundedCornerView  IsVisible="{OnPlatform iOS=true, Android= false}"
+                x:Name="CerchioRc"
+                BorderColor="Black"
+                HeightRequest="64" 
+                WidthRequest="64" 
+                RoundedCornerRadius="32.5"
+                HorizontalOptions="Start" 
+                VerticalOptions="Center" 
+                Margin="5" 
+                Padding="0" 
+                IsEnabled="False">
+
+                <StackLayout 
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                    <Label
+                        x:Name="inizialeLabel_iOS"
+                        Font="Bold,28"
+                        TextColor="WhiteSmoke" 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        HorizontalTextAlignment="Center" 
+                        VerticalTextAlignment="Center" />
+
+                </StackLayout>
+            </local:RoundedCornerView>
+
+            <StackLayout  
+                HorizontalOptions="Start"
+                VerticalOptions="StartAndExpand"
+                Orientation="Horizontal">
+                <StackLayout>
+                    <Label 
+                        VerticalOptions="StartAndExpand"
+                        Margin="10,24,0,0"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        x:Name="friendly_name"
+                        TextColor="Black">
+                    </Label>
+
+                    <Label           
+                        VerticalOptions="CenterAndExpand"
+                        Margin="13,0,0,0"
+                        FontSize="16"
+                        Opacity="0.6"
+                        x:Name="userFunds">
+                    </Label>
+                </StackLayout>
+
+            </StackLayout>
+            <StackLayout
+                HorizontalOptions="EndAndExpand"
+                Orientation="Horizontal">
+                <Button     
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End"
+                    Margin="0,0,10,0"
+                    Clicked="Bottone_ClickedAsync"
+                    x:Name="bottone"
+                    TextColor="#6495ed"
+                    Text="Modifica"
+                    Font="Bold,12"
+                    BackgroundColor="Transparent">
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

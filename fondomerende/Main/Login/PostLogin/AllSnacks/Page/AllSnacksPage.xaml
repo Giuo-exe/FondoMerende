@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local2="clr-namespace:fondomerende.Main.Utilities"
+             x:Class="fondomerende.Main.Login.PostLogin.AllSnack.Page.AllSnacksPage"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:local="clr-namespace:fondomerende.Main.Utilities"
+             BackgroundColor="{OnPlatform Android= {StaticResource ColorSnackBackground}, iOS= 'White'}"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:local1="clr-namespace:fondomerende.Main.Login.PostLogin.AllSnacks.View"
+             ios:Page.UseSafeArea="True"
+             xmlns:Gradient="clr-namespace:fondomerende.Main.Utilities"
+             Title="Merende">
+
+    <ContentPage.Content>
+        <Grid
+            x:Name="PaoloGrid">
+            <Image
+                x:Name="sfondo"
+                Grid.Row="0"
+                Grid.Column="0"
+                Aspect="Fill"
+                Source="{local:EmbeddedImage Resource=fondomerende.image.sfondopt1.png}"
+                Opacity="0.9">
+            </Image>
+            
+            <StackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                x:Name="StackSnack">
+
+                <StackLayout 
+                    Orientation="Horizontal"
+                    HeightRequest="45"
+                    BackgroundColor="#fff0df"
+                    Opacity="0.9">
+
+                    <!--"{OnPlatform Android=#f9cb2a, Default= #f9bb15}"-->
+                    <!--è un bel colore"#ffb121"-->
+                    
+
+                    <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start" 
+                            Margin="15,0,0,0"
+                            Text="Snacks"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            TextColor="{OnPlatform Android=#f29e17}">
+                            
+                    </Label>
+
+
+                    <ImageButton
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            Aspect="Fill"
+                            Margin="0,0,15,0"
+                            HorizontalOptions="EndAndExpand" 
+                            VerticalOptions="CenterAndExpand"
+                            Source="{local2:EmbeddedImage Resource=fondomerende.image.star_empty.png}"
+                            Scale="{OnIdiom Phone=0.9}"
+                            Clicked="favourite_Clicked"
+                            x:Name="favourite"
+                            BackgroundColor="Transparent"
+                            IsVisible="True">
+                    </ImageButton>
+                </StackLayout>
+
+                
+
+                <StackLayout
+                    Margin="0,-5,0,0"
+                    Spacing="0"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    VerticalOptions="StartAndExpand"
+                    x:Name="Cane">
+                    
+                    <Grid
+                        VerticalOptions="Start"
+                        x:Name="griglia">
+                        <ScrollView 
+                            VerticalOptions="StartAndExpand"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            IsVisible="True" 
+                            x:Name="ScrollSnackView"  
+                            Padding="0,0,0,10">
+                            <Grid 
+                                HorizontalOptions="CenterAndExpand"
+                                x:Name="GridView" 
+                                ColumnSpacing="20"
+                                Margin="0,0,0,0">
+                                
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                
+                                <StackLayout 
+                                    Grid.Column="0" 
+                                    x:Name="Column0"
+                                    Spacing="25"
+                                    HorizontalOptions="StartAndExpand"
+                                    Margin="0,5,0,0">
+                                </StackLayout>
+                                
+                                <StackLayout 
+                                    Grid.Column="1" 
+                                    x:Name="Column1"
+                                    Spacing="25"
+                                    HorizontalOptions="EndAndExpand"
+                                    Margin="0,5,0,0">
+                                </StackLayout>
+                            </Grid>
+
+                        </ScrollView>
+
+                        <ScrollView 
+                            VerticalOptions="StartAndExpand"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            IsVisible="False" 
+                            x:Name="ScrollFavourites"
+                            Padding="0,0,0,10">
+
+
+                            <Grid
+                                HorizontalOptions="CenterAndExpand"
+                                ColumnSpacing="20"
+                                Margin="0,0,0,0"
+                                x:Name="GridFavView">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout 
+                                        Grid.Column="0" 
+                                        x:Name="Column0Fav"
+                                        Spacing="25"
+                                        HorizontalOptions="StartAndExpand"
+                                        Margin="0,5,0,0">
+                                </StackLayout>
+                                <StackLayout 
+                                        Grid.Column="1" 
+                                        x:Name="Column1Fav"
+                                        Spacing="25"
+                                        HorizontalOptions="EndAndExpand"
+                                        Margin="0,5,0,0">
+                                </StackLayout>
+                            </Grid>
+                        </ScrollView>
+
+                        <StackLayout
+                            Margin="0,20,0,0"
+                            InputTransparent="True"
+                            Opacity="0.4"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            IsVisible="True"
+                            x:Name="EmptyStackFav">
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+                
+                
+                <ListView
+                    Margin="0,-40,0,0"
+                    x:Name="ListView"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    IsPullToRefreshEnabled="true"
+                    RefreshCommand="{Binding RefreshCommand}"
+                    IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                    IsVisible="False"
+                    ItemSelected="ListView_ItemSelected"
+                    BackgroundColor="#FFF8EB"
+                    HasUnevenRows="True">
+                    
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:Name="DataTemp">
+                            <local1:SnackViewCell 
+                            x:Name="SnackViewCellSource">
+                            </local1:SnackViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            
+            <StackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                x:Name="Paolo"
+                InputTransparent="True">
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

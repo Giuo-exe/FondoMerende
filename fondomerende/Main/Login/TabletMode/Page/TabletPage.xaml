@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="fondomerende.Main.Login.TabletMode.Page.TabletPage"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:local="clr-namespace:fondomerende.Main.Utilities"
+             Title="Azioni">
+    <ContentPage.Content>
+        <Grid>
+            <Image
+                Grid.Column="0"
+                Grid.Row="0"
+                Aspect="Fill"
+                Source="{local:EmbeddedImage Resource=fondomerende.image.sfondopt1.png}"
+                BackgroundColor="#fad5b5"
+                Opacity="0.9">
+            </Image>
+
+            <StackLayout 
+                Grid.Column="0"
+                Grid.Row="0">
+                <StackLayout
+                    VerticalOptions="StartAndExpand"
+                    Orientation="Horizontal"
+                    BackgroundColor= "#f29e17"  
+                    HeightRequest="{OnPlatform Android=45, iOS=60}">
+                    
+                    <ImageButton
+                        HeightRequest="{OnPlatform Android=25, iOS=30}"
+                        WidthRequest="{OnPlatform Android=25, iOS=30}"
+                        Aspect="Fill"
+                        Margin="15,0,15,5"
+                        HorizontalOptions="StartAndExpand" 
+                        VerticalOptions="{OnPlatform Android = CenterAndExpand, iOS=EndAndExpand}"
+                        Source="{local:EmbeddedImage Resource = fondomerende.image.Edit_Icon_32x32.png}"
+                        Scale="0.9"
+                        BackgroundColor="Transparent"
+                        IsVisible="True"
+                        Clicked="ChangedCliccato">
+                    </ImageButton>
+                    
+                    <ImageButton
+                        HeightRequest="{OnPlatform Android=25, iOS=30}"
+                        WidthRequest="{OnPlatform Android=25, iOS=30}"
+                        Aspect="Fill"
+                        Margin="0,0,15,5"
+                        HorizontalOptions="EndAndExpand" 
+                        VerticalOptions="{OnPlatform Android= CenterAndExpand, iOS=EndAndExpand}"
+                        Source="{local:EmbeddedImage Resource=fondomerende.image.adduser.png}"
+                        Scale="0.9"
+                        BackgroundColor="Transparent"
+                        IsVisible="True"
+                        Clicked="AdduserCliccato">
+                    </ImageButton>
+                </StackLayout>
+
+                <ScrollView
+                    IsVisible="True">
+
+                    <Grid
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="0,40,0,0"
+                    ColumnSpacing="20"
+                    RowSpacing="10">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+
+                        
+                        <ImageButton
+                            HeightRequest="170"
+                            WidthRequest="170"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Aspect="AspectFill"
+                            Source="{local:EmbeddedImage Resource=fondomerende.image.imagebutton.Deposita_image_button_1024x1024.png}"
+                            Clicked="DepositaCliccato">
+                        </ImageButton>
+
+                       
+
+                        <ImageButton
+                            HeightRequest="170"
+                            WidthRequest="170"
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Source="{local:EmbeddedImage Resource=fondomerende.image.imagebutton.Eat_1024x1024.png}"
+                            CornerRadius="2"
+                            Clicked="EatClicked">
+
+                        </ImageButton>
+
+                        <ImageButton
+                            HeightRequest="170"
+                            WidthRequest="170"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Source="{local:EmbeddedImage Resource=fondomerende.image.imagebutton.Chrono.png}"
+                            CornerRadius="2"
+                            Clicked="CronologiaCliccato">
+
+                        </ImageButton>
+
+                        <ImageButton
+                            HeightRequest="170"
+                            WidthRequest="170"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            Source="{local:EmbeddedImage Resource=fondomerende.image.imagebutton.Add_snack_image_button_1024x1204.png}"
+                            Clicked="AddSnackCliccato">
+
+                        </ImageButton>
+
+                        <ImageButton
+                            HeightRequest="170"
+                            WidthRequest="170"
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Source="{local:EmbeddedImage Resource=fondomerende.image.imagebutton.Buy_snack.png}"
+                            Clicked="BuySnackCliccato">
+                        </ImageButton>
+
+                        <ImageButton
+                            HeightRequest="170"
+                            WidthRequest="170"
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            Source="{local:EmbeddedImage Resource=fondomerende.image.imagebutton.Edit_snack_image_button_1024x1024.png}"
+                            Clicked="EditSnackCliccato">
+                        </ImageButton>
+
+                        <ImageButton
+                            HeightRequest="170"
+                            WidthRequest="170"
+                            Grid.Column="1"
+                            Grid.Row="3"
+                            Source="{local:EmbeddedImage Resource=fondomerende.image.imagebutton.Back.png}"
+                            Clicked="BackCliccato">
+                        </ImageButton>
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
